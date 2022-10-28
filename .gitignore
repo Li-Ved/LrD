@@ -1,0 +1,9 @@
+# Object files
+*.o
+
+unit_tests
+main
+
+lib.a
+
+words.txt
