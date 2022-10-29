@@ -1,0 +1,18 @@
+name: LR
+
+on: 
+    push:
+
+jobs:
+    build:
+
+        runs-on ubuntu-lastest
+
+        step:
+        - uses: 
+        - name: main
+          run: make
+        - name: tests
+          run: make test
+        - name: run tests
+          run: ./bin/tests
