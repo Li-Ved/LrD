@@ -1,18 +1,15 @@
-name: LR
+name: Build
 
-on: 
-    push:
+on: push
 
 jobs:
-    build:
+  build:
+    runs-on: ubuntu-20.04
 
-        runs-on ubuntu-lastest
+    steps:
+      - uses: actions/checkout@v2
 
-        step:
-        - uses: actions/checkout@v1
-        - name: main
-          run: make
-        - name: tests
-          run: make test
-        - name: run tests
-          run: ./tests
+
+
+      - name: Build application
+        run: make
