@@ -9,7 +9,7 @@ jobs:
         runs-on ubuntu-lastest
 
         step:
-        - uses: 
+        - uses: actions/checkout@v1
         - name: main
           run: make
         - name: tests
