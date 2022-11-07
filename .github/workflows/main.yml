@@ -1,7 +1,15 @@
-dist: bionic
-language: c
-compiler: gcc
-script: 
-    - make 
-    #- git ls-files src/ | xargs clang-format -i && git diff --exit-code 
-    - ./bin/test
+name: Build
+
+on: push
+
+jobs:
+  build:
+    runs-on: windows
+
+    steps:
+      - uses: actions/checkout@v2
+
+
+
+      - name: Build application
+        run: make
